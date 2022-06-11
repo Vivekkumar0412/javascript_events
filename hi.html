@@ -67,6 +67,15 @@
         btn3.addEventListener('click',function(){
             alert("Because it does not ignore any code nor it overwrite any thong it just go with the flow")
         });
+
+        // it is basically a way of checking that what are the events that have been fired.
+        // it also tells us that where the event has been fired.
+        const checkfun = () =>{
+            console.log(event);
+            console.log(event.type);
+            console.log(event.target);
+        }
+        btn3.addEventListener('click',checkfun);
     </script>
 </body>
 </html>
