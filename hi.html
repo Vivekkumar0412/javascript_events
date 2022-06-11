@@ -32,7 +32,7 @@
             <button id="1" onclick="alert('hi there its using the inline method')">Button 1</button>
         </div>
         <div class="second">
-            <button id="2" onclick="callfun()">Button 2</button>
+            <button id="2">Button 2</button>
         </div>
         <div class="third">
             <button id="3">Button 3</button>
@@ -43,6 +43,30 @@
        function callfun(){
             alert("hi there its using the conventional funtion which is used by most of the people");
         };
+        // but we have a problem with this type of event calling...
+        // the problem is we try to call an event by same name then it overrites a call.
+
+        let btn2 = document.getElementById('2');
+        btn2.onclick = () =>{
+            alert("Hi we are dealing with the problem")
+        };
+
+        // it will ignore the first call beacuse the first call is overwritten by the second call.
+
+        btn2.onclick = () =>{
+            alert("Hi we are dealing with the problem again")
+        };
+
+        // Now the most usefull and correct way of calling an event is using event listner
+
+        let btn3 = document.getElementById('3');
+        btn3.addEventListener('click',()=>{
+            alert(" This is the most effective way of writing an event.")
+        });
+
+        btn3.addEventListener('click',function(){
+            alert("Because it does not ignore any code nor it overwrite any thong it just go with the flow")
+        });
     </script>
 </body>
 </html>
