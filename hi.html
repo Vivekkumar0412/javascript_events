@@ -23,6 +23,8 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
+        }p{
+            color: white;
         }
     </style>
 </head>
@@ -36,6 +38,10 @@
         </div>
         <div class="third">
             <button id="3">Button 3</button>
+        </div>
+        <div>
+            <p id="p" onmousedown="mouseDown()" onmouseup="mouseUp()">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi, eligendi amet excepturi veniam asperiores dicta magnam nesciunt sapiente ad iure expedita ducimus soluta earum! Sequi consequuntur unde aspernatur illum iste.
+            Eaque nihil quam magnam assumenda obcaecati, dignissimos quibusdam quo veniam quisquam consequuntur quas sed placeat animi excepturi cum suscipit recusandae asperiore</p>
         </div>
     </div>
 
@@ -76,6 +82,26 @@
             console.log(event.target);
         }
         btn3.addEventListener('click',checkfun);
+
+        // mouse events
+
+        let para = document.getElementById('p');
+        // para.addEventListener('onmousedown',mouseDown);
+        // para.addEventListener('onmouseup',mouseUp);
+
+        
+
+        function mouseDown(){
+            para.style.color ='red';
+        }
+
+        function mouseUp(){
+            para.style.color ='green';
+        }
+
+        // const  = ()=>{
+        //     para.style.color ='yellow';
+        // }
     </script>
 </body>
 </html>
