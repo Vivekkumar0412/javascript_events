@@ -33,6 +33,7 @@
         <div class="first">
             <button id="1" onclick="alert('hi there its using the inline method')">Button 1</button>
         </div>
+        <button id="6" onmouseenter="mouseEnter()" onmouseleave="mouseLeave()">Hello</button>
         <div class="second">
             <button id="2">Button 2</button>
         </div>
@@ -102,6 +103,18 @@
         // const  = ()=>{
         //     para.style.color ='yellow';
         // }
+
+        let btn1 = document.getElementById('6');
+        function mouseEnter(){
+            btn1.style.backgroundColor = 'red';
+            btn1.style.color = 'yellow';
+        };
+    
+        function mouseLeave(){
+            btn1.style.backgroundColor = 'yellow';
+            btn1.style.color = 'red';
+        }
+
     </script>
 </body>
 </html>
